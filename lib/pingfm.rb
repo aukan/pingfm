@@ -46,6 +46,24 @@ module Pingfm
 
     Dir.glob(search_me).sort.each {|rb| require rb}
   end
+  
+  class << self
+    
+    @@config = { :api_key => "", :user_app_key => "" }
+  
+    # Load RAILS default configuration file (#{RAILS_ROOT}/config/pingfm.yml)
+    def load_default_config
+      config_file = "#{RAILS_ROOT}/config/pingfm.yml"
+      return false unless File.exist?(config_file)
+    
+      @@config = YAML.load_file(config_file)[RAILS_ENV]
+    end
+    
+    def config
+      @@config
+    end
+    
+  end # class << self
 
 end  # module Pingfm
 

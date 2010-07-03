@@ -10,9 +10,13 @@ module Pingfm
 
   class Client
 
-  	def initialize(api_key, user_app_key)
+  	def initialize(api_key = nil, user_app_key = nil)
   		@api_key = api_key
   		@user_app_key = user_app_key
+  		
+  		# Sets default values in case api_key or user_app_key weren't specified
+  		@api_key ||= Pingfm.config['api_key']
+  		@user_app_key ||= Pingfm.config['user_app_key']
   	end
 
   	# Validates API key and user APP key

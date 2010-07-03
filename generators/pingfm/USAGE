@@ -1,0 +1,5 @@
+Use in case you wish to have a default configuration for Pingfm::Client
+
+Usage:
+
+script/generate pingfm

@@ -1,0 +1,17 @@
+# Default configuration for pingfm
+# You can obtain your keys here:
+#   User API Key - http://ping.fm/key/
+#   Application API Key - http://ping.fm/developers/
+
+development:
+  api_key: 
+  user_app_key: 
+    
+test:
+  api_key: 
+  user_app_key: 
+    
+production: 
+  api_key: 
+  user_app_key: 
+    

@@ -2,6 +2,8 @@
 
 require 'rake/gempackagetask'
 
+require(File.join(File.dirname(__FILE__), 'setup'))
+
 namespace :gem do
 
   PROJ.gem._spec = Gem::Specification.new do |s|

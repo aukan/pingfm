@@ -48,9 +48,9 @@ PROJ = OpenStruct.new(
   # Gem Packaging
   :gem => OpenStruct.new(
     :dependencies => [],
-    :executables => nil,
+    :executables => {},
     :extensions => FileList['ext/**/extconf.rb'],
-    :files => nil,
+    :files => {},
     :need_tar => true,
     :need_zip => false,
     :extras => {}

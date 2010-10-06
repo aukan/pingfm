@@ -7,8 +7,6 @@ rescue LoadError
 end
 require 'time'
 
-require(File.join(File.dirname(__FILE__), 'setup'))
-
 namespace :ann do
 
   # A prerequisites task that all other tasks depend upon
